@@ -24,10 +24,25 @@ namespace Resturant_os.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Resturant> Resturants { get; set; }
+
+        public System.Data.Entity.DbSet<ResturantMenu> ResturantMenus { get; set; }
+
+        public System.Data.Entity.DbSet<FoodType> FoodTypes { get; set; }
+
+        public System.Data.Entity.DbSet<Food> Foods { get; set; }
+
+        public System.Data.Entity.DbSet<OrderType> OrderTypes { get; set; }
+
+        public System.Data.Entity.DbSet<Order> Orders { get; set; }
+
+        //public System.Data.Entity.DbSet<Model> TableName { get; set; }
+
     }
 }

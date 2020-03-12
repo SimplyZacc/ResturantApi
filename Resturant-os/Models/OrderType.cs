@@ -6,13 +6,11 @@ using System.Web;
 
 namespace Resturant_os.Models
 {
-    [Table("Resturants")]
-    public class Resturant
+    [Table("OrderTypes")]
+    public class OrderType
     {
-        public int ResturantId { get; set; }
-        public string ResturantName { get; set; }
-        public string Address { get; set; }
-        public string PhoneNo { get; set; }
+        public int OrderTypeId { get; set; }
+        public string OrderTypeName { get; set; }
         public DateTime Updated { get; set; }
         public DateTime Created { get; set; }
     }

@@ -3,27 +3,25 @@ namespace Resturant_os.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addResturantTable : DbMigration
+    public partial class addOrdersTable : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-               "dbo.Resturants",
+                "dbo.Orders",
                c => new
                {
-                   ResturantId = c.Int(nullable: false, identity: true),
-                   ResturantName = c.String(nullable: false),
-                   Address = c.String(nullable: true),
-                   PhoneNo = c.String(nullable: true),
+                   OrderId = c.Int(nullable: false, identity: true),
+                   OrderTypeId = c.Int(nullable: false),
                    Updated = c.DateTime(nullable: false),
                    Created = c.DateTime(nullable: false)
                })
-               .PrimaryKey(t => t.ResturantId);
+               .PrimaryKey(t => t.OrderId);
         }
         
         public override void Down()
         {
-            DropTable("dbo.Resturants");
+            DropTable("Orders");
         }
     }
 }

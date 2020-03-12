@@ -49,11 +49,17 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -207,10 +213,13 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ResturantController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\HelperClasses.cs" />
+    <Compile Include="Helpers\HelperFunctionsController.cs" />
     <Compile Include="Migrations\202003072324107_initial.cs" />
     <Compile Include="Migrations\202003072324107_initial.Designer.cs">
       <DependentUpon>202003072324107_initial.cs</DependentUpon>
@@ -231,12 +240,22 @@
     <Compile Include="Migrations\202003102312124_addFoodsTable.Designer.cs">
       <DependentUpon>202003102312124_addFoodsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003102333088_addOrdersTable.cs" />
+    <Compile Include="Migrations\202003102333088_addOrdersTable.Designer.cs">
+      <DependentUpon>202003102333088_addOrdersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003102340447_addOrderTypesTable.cs" />
+    <Compile Include="Migrations\202003102340447_addOrderTypesTable.Designer.cs">
+      <DependentUpon>202003102340447_addOrderTypesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Food.cs" />
     <Compile Include="Models\FoodType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderType.cs" />
     <Compile Include="Models\Resturant.cs" />
     <Compile Include="Models\ResturantMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -347,6 +366,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003102312124_addFoodsTable.resx">
       <DependentUpon>202003102312124_addFoodsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003102333088_addOrdersTable.resx">
+      <DependentUpon>202003102333088_addOrdersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003102340447_addOrderTypesTable.resx">
+      <DependentUpon>202003102340447_addOrderTypesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
